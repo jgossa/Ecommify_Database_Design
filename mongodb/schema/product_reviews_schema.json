@@ -1,0 +1,57 @@
+{
+  "collection": "product_reviews",
+  "description": "Reseñas extendidas de productos y pedidos, orientadas a consulta documental y análisis de sentimiento.",
+  "pattern": "Reference + extended document",
+  "source_of_truth": "PostgreSQL core.reviews_ref for transactional reference; MongoDB stores extended text and analytical enrichments",
+  "sync_strategy": "Review metadata remains in PostgreSQL; enriched review content is stored in MongoDB and linked by order_id/product_id",
+  "example_document": {
+    "_id": "64f7a1b9e3b2c9a8f0b67890",
+    "review_id": "9a3d5f2e-1234-4a55-9876-abcdef123456",
+    "order_id": "a1b2c3d4-1111-2222-3333-abcdefabcdef",
+    "product_id": "b6f3c4a1-2c9a-4f0a-9a22-18c7c9b12345",
+    "customer_id": "7f9e1b3d-aaaa-bbbb-cccc-123456789abc",
+    "review_score": 5,
+    "review": {
+      "title": "Excelente producto",
+      "message": "El producto llegó en buen estado y cumplió con las expectativas.",
+      "language": "pt-BR",
+      "created_at": "2026-05-25T00:00:00Z",
+      "answered_at": null
+    },
+    "analytics": {
+      "sentiment": "positive",
+      "sentiment_score": 0.91,
+      "keywords": [
+        "entrega",
+        "calidad",
+        "producto"
+      ]
+    },
+    "last_synced_at": "2026-05-25T00:00:00Z"
+  },
+  "indexes": [
+    {
+      "fields": {
+        "review_id": 1
+      },
+      "unique": true
+    },
+    {
+      "fields": {
+        "product_id": 1,
+        "review_score": -1
+      }
+    },
+    {
+      "fields": {
+        "order_id": 1
+      }
+    },
+    {
+      "fields": {
+        "review.message": "text",
+        "review.title": "text"
+      }
+    }
+  ]
+}

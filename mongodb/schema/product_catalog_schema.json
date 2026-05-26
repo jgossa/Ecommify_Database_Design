@@ -1,0 +1,61 @@
+{
+  "collection": "product_catalog",
+  "description": "Catálogo enriquecido de productos para búsquedas flexibles, navegación y atributos semiestructurados.",
+  "pattern": "Embedded document + flexible attributes",
+  "source_of_truth": "PostgreSQL core.products and core.product_categories",
+  "sync_strategy": "Asynchronous read model generated from PostgreSQL product master data",
+  "example_document": {
+    "_id": "64f7a1b9e3b2c9a8f0a12345",
+    "product_id": "b6f3c4a1-2c9a-4f0a-9a22-18c7c9b12345",
+    "category": {
+      "category_id": "c9e1b5f4-2a8f-4c71-b1e1-456789abcdef",
+      "name": "informatica_acessorios",
+      "name_en": "computers_accessories"
+    },
+    "name": "Mouse inalámbrico ergonómico",
+    "description": "Producto tecnológico con atributos variables para búsqueda y recomendación.",
+    "specifications": {
+      "brand": "GenericTech",
+      "color": "black",
+      "connectivity": "wireless",
+      "warranty_months": 12
+    },
+    "photos": [
+      "https://example.com/products/mouse-1.jpg",
+      "https://example.com/products/mouse-2.jpg"
+    ],
+    "dimensions": {
+      "weight_g": 150,
+      "length_cm": 12,
+      "height_cm": 4,
+      "width_cm": 7
+    },
+    "search_terms": [
+      "mouse",
+      "inalambrico",
+      "ergonomico",
+      "computers_accessories"
+    ],
+    "last_synced_at": "2026-05-25T00:00:00Z"
+  },
+  "indexes": [
+    {
+      "fields": {
+        "product_id": 1
+      },
+      "unique": true
+    },
+    {
+      "fields": {
+        "category.name": 1
+      }
+    },
+    {
+      "fields": {
+        "name": "text",
+        "description": "text",
+        "search_terms": "text"
+      }
+    }
+  ]
+}

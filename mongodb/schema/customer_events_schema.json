@@ -1,0 +1,59 @@
+{
+  "collection": "customer_events",
+  "description": "Eventos de comportamiento de usuarios para análisis de navegación, embudos y recomendaciones.",
+  "pattern": "Event document / append-only log",
+  "source_of_truth": "Application event stream",
+  "sync_strategy": "Events are captured directly from the application layer and periodically aggregated for analytics",
+  "example_document": {
+    "_id": "64f7a1b9e3b2c9a8f0c24680",
+    "event_id": "evt_20260525_000001",
+    "customer_id": "7f9e1b3d-aaaa-bbbb-cccc-123456789abc",
+    "session_id": "sess_abc123xyz",
+    "event_type": "product_view",
+    "event_timestamp": "2026-05-25T00:00:00Z",
+    "channel": "web",
+    "device": {
+      "type": "desktop",
+      "os": "macOS",
+      "browser": "Chrome"
+    },
+    "product": {
+      "product_id": "b6f3c4a1-2c9a-4f0a-9a22-18c7c9b12345",
+      "category": "informatica_acessorios"
+    },
+    "context": {
+      "referrer": "search",
+      "campaign": "academic-demo",
+      "page_url": "/products/b6f3c4a1"
+    },
+    "metadata": {
+      "duration_seconds": 45,
+      "position_in_results": 3
+    }
+  },
+  "indexes": [
+    {
+      "fields": {
+        "event_id": 1
+      },
+      "unique": true
+    },
+    {
+      "fields": {
+        "customer_id": 1,
+        "event_timestamp": -1
+      }
+    },
+    {
+      "fields": {
+        "event_type": 1,
+        "event_timestamp": -1
+      }
+    },
+    {
+      "fields": {
+        "product.product_id": 1
+      }
+    }
+  ]
+}
