@@ -2,6 +2,13 @@
 
 Repositorio académico para el diseño conceptual y lógico de la base de datos del proyecto **Ecommify**, una plataforma e-commerce multivendedor orientada a productos tecnológicos.
 
+# Integrantes
+
+Nestor Alejandro Rodriguez Benavides - nestorrobe@unisabana.edu.co
+Carlos Daniel Sandoval - carlossandpar@unisabana.edu.co
+Peter Alexander Palacios Garnica - peterpaga@unisabana.edu.co
+Juan Guillermo Ossa Sánchez - juanossa@unisabana.edu.co
+
 ## Enfoque arquitectónico
 
 El proyecto utiliza la **Opción 1: Arquitectura Transaccional-Analítica**:
