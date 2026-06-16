@@ -1,0 +1,4 @@
+index_name,keys,unique
+_id_,{'_id': 1},False
+idx_review_buckets_product_period_sequence,"{'product_id': 1, 'bucket_period': -1, 'bucket_sequence': 1}",True
+idx_review_buckets_period_score,"{'bucket_period': -1, 'avg_review_score': 1}",False

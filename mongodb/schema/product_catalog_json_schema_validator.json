@@ -1,0 +1,83 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "product_id",
+      "name",
+      "category",
+      "price_summary",
+      "specifications",
+      "seller_summary",
+      "rating_summary",
+      "sales_summary",
+      "search_keywords",
+      "source_system",
+      "schema_version",
+      "created_at",
+      "updated_at"
+    ],
+    "properties": {
+      "product_id": {
+        "bsonType": "string",
+        "description": "Identificador \u00fanico del producto."
+      },
+      "name": {
+        "bsonType": "string",
+        "description": "Nombre legible del producto en cat\u00e1logo."
+      },
+      "category": {
+        "bsonType": "object",
+        "description": "Informaci\u00f3n de categor\u00eda del producto."
+      },
+      "price_summary": {
+        "bsonType": "object",
+        "description": "Resumen de precios calculado para el producto."
+      },
+      "specifications": {
+        "bsonType": "object",
+        "description": "Atributos variables del producto seg\u00fan categor\u00eda."
+      },
+      "physical_attributes": {
+        "bsonType": "object",
+        "description": "Atributos f\u00edsicos del producto cuando est\u00e1n disponibles."
+      },
+      "seller_summary": {
+        "bsonType": "array",
+        "description": "Resumen embebido de vendedores asociados al producto."
+      },
+      "rating_summary": {
+        "bsonType": "object",
+        "description": "Resumen calculado de calificaciones."
+      },
+      "sales_summary": {
+        "bsonType": "object",
+        "description": "Resumen calculado de ventas."
+      },
+      "search_keywords": {
+        "bsonType": "array",
+        "description": "Palabras clave usadas para b\u00fasqueda textual."
+      },
+      "source_system": {
+        "bsonType": "string",
+        "description": "Sistema origen de los datos."
+      },
+      "schema_version": {
+        "bsonType": [
+          "int",
+          "long",
+          "double",
+          "decimal"
+        ],
+        "description": "Versi\u00f3n del esquema documental."
+      },
+      "created_at": {
+        "bsonType": "date",
+        "description": "Fecha de creaci\u00f3n del documento."
+      },
+      "updated_at": {
+        "bsonType": "date",
+        "description": "Fecha de \u00faltima actualizaci\u00f3n del documento."
+      }
+    }
+  }
+}

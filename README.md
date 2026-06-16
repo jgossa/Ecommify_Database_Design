@@ -1,63 +1,174 @@
 # Ecommify Database Design
 
-Repositorio académico para el diseño conceptual y lógico de la base de datos del proyecto **Ecommify**, una plataforma e-commerce multivendedor orientada a productos tecnológicos.
+Repositorio académico del proyecto Ecommify, una plataforma e-commerce multivendedor orientada a productos tecnológicos.
 
-# Integrantes
+Este repositorio consolida el diseño e implementación técnica de una arquitectura híbrida con PostgreSQL/Supabase y MongoDB Atlas, incluyendo modelo relacional, modelo documental, optimización de consultas, evidencias de rendimiento y documentación técnica.
 
-Nestor Alejandro Rodriguez Benavides - nestorrobe@unisabana.edu.co
+## Integrantes
 
-Carlos Daniel Sandoval - carlossandpar@unisabana.edu.co
-
-Peter Alexander Palacios Garnica - peterpaga@unisabana.edu.co
-
-Juan Guillermo Ossa Sánchez - juanossa@unisabana.edu.co
+- Nestor Alejandro Rodriguez Benavides - nestorrobe@unisabana.edu.co
+- Carlos Daniel Sandoval - carlossandpar@unisabana.edu.co
+- Peter Alexander Palacios Garnica - peterpaga@unisabana.edu.co
+- Juan Guillermo Ossa Sánchez - juanossa@unisabana.edu.co
 
 ## Enfoque arquitectónico
 
-El proyecto utiliza la **Opción 1: Arquitectura Transaccional-Analítica**:
+El proyecto utiliza la Opción 1: Arquitectura Transaccional-Analítica.
 
-- **PostgreSQL / Supabase** para el módulo transaccional: pedidos, pagos, inventario, clientes, vendedores y productos maestros.
-- **MongoDB Atlas** para el módulo documental/analítico: catálogo enriquecido, reseñas, comportamiento de usuarios y snapshots analíticos.
+- PostgreSQL / Supabase se usa como núcleo transaccional para pedidos, pagos, inventario, clientes, vendedores y productos maestros.
+- MongoDB Atlas se usa como módulo documental y analítico para catálogo enriquecido, reseñas, búsqueda textual, patrones documentales y consultas flexibles.
+
+MongoDB no reemplaza PostgreSQL; lo complementa para escenarios donde el modelo documental ofrece mayor flexibilidad.
 
 ## Objetivo del repositorio
 
-Centralizar los artefactos técnicos del entregable:
+Centralizar los artefactos técnicos del proyecto Ecommify:
 
-- Documento técnico de diseño.
-- Presentación ejecutiva.
-- Scripts SQL preliminares para PostgreSQL.
-- Esquemas preliminares para MongoDB.
-- Consultas de validación y monitoreo.
-- Notebook de análisis exploratorio del dataset Brazilian E-Commerce / Olist.
+- Documentación técnica de diseño e implementación.
+- Scripts SQL para PostgreSQL.
+- Scripts Python y JSON para MongoDB.
+- Notebooks de implementación y validación.
+- Evidencias de rendimiento antes/después.
+- Evidencias de JSON Schema y Bucket Pattern.
+- Documentación de sharding y replica sets.
+- Material de soporte para video de demostración.
 
 ## Estructura del repositorio
 
-```text
 Ecommify_Database_Design/
-├── README.md
-├── docs/
-│   ├── Documento_Tecnico_Diseno.pdf
-│   └── Presentacion_Ejecutiva.pdf
-├── postgresql/
-│   ├── schema/
-│   │   ├── 00_extensions.sql
-│   │   ├── 01_schemas.sql
-│   │   ├── 02_types_domains.sql
-│   │   ├── 03_tables_core.sql
-│   │   ├── 04_tables_transactions.sql
-│   │   ├── 05_indexes.sql
-│   │   ├── 06_triggers_updated_at.sql
-│   │   ├── 07_partitioning_orders.sql
-│   │   └── 08_materialized_views.sql
-│   ├── seed_data/
-│   │   └── 10_seed_data.sql
-│   └── queries/
-│       ├── 11_validation_queries.sql
-│       └── 12_monitoring_queries.sql
-├── mongodb/
-│   └── schema/
-│       ├── product_catalog_schema.json
-│       ├── product_reviews_schema.json
-│       └── customer_events_schema.json
-└── notebooks/
-    └── Data_Exploration_Analysis.ipynb
+- README.md
+- docs/
+  - u5_etapa2/
+- postgresql/
+  - README.md
+  - schema/
+  - seed_data/
+  - queries/
+  - indexes/
+  - evidence/
+    - validation/
+    - explain_before_after/
+- mongodb/
+  - README.md
+  - schema/
+  - indexes/
+  - queries/
+  - sharding/
+  - evidence/
+    - json_schema/
+    - bucket_pattern/
+    - explain_before_after/
+    - indexes/
+- notebooks/
+- evidence/
+  - screenshots/
+  - video/
+
+## PostgreSQL
+
+La carpeta postgresql/ contiene la implementación relacional y transaccional del proyecto.
+
+Incluye:
+
+- extensiones PostgreSQL;
+- esquemas;
+- tipos y dominios;
+- tablas principales;
+- tablas transaccionales;
+- índices;
+- triggers;
+- particionamiento de core.orders;
+- vistas materializadas;
+- consultas de validación y monitoreo.
+
+Para más detalle, revisar:
+
+postgresql/README.md
+
+## MongoDB
+
+La carpeta mongodb/ contiene la implementación documental del proyecto.
+
+Incluye:
+
+- JSON Schema para product_catalog;
+- scripts de índices MongoDB;
+- construcción de product_review_buckets;
+- evidencias de Bucket Pattern;
+- evidencias de explain antes/después;
+- documentación de sharding y replica sets.
+
+Para más detalle, revisar:
+
+mongodb/README.md
+
+## Notebooks
+
+La carpeta notebooks/ contiene notebooks de análisis, carga, validación y optimización usados durante el proyecto.
+
+Los notebooks deben estar documentados por hitos para facilitar trazabilidad con los documentos técnicos.
+
+## Evidencias
+
+Las evidencias se organizan por motor.
+
+### PostgreSQL
+
+Ubicación:
+
+postgresql/evidence/
+
+Incluye validaciones del esquema core, tablas, índices, constraints, particionamiento y ejecución de consultas con EXPLAIN ANALYZE.
+
+### MongoDB
+
+Ubicación:
+
+mongodb/evidence/
+
+Incluye evidencias de:
+
+- JSON Schema;
+- Bucket Pattern;
+- índices;
+- explain antes/después;
+- pipeline de agregación.
+
+## Ejecución general
+
+### PostgreSQL
+
+Los scripts SQL se encuentran en:
+
+postgresql/schema/
+
+Deben ejecutarse en orden numérico cuando se reconstruya el entorno.
+
+### MongoDB
+
+Los scripts principales se ejecutan usando la variable de entorno MONGODB_URI.
+
+Ejemplo:
+
+export MONGODB_URI="mongodb+srv://usuario:password@cluster.mongodb.net/?retryWrites=true&w=majority"
+python mongodb/indexes/mongodb_indexes.py
+
+Por seguridad, las credenciales no deben guardarse en el repositorio.
+
+## Entregables Unidad 5 - Etapa 2
+
+La Etapa 2 corresponde a la implementación técnica completa en PostgreSQL y MongoDB.
+
+Los entregables asociados son:
+
+1. Documento técnico de implementación.
+2. Repositorio GitHub actualizado.
+3. Video de demostración.
+
+## Alcance y limitaciones
+
+- El repositorio mantiene continuidad con entregas anteriores del proyecto.
+- PostgreSQL conserva el rol de fuente transaccional principal.
+- MongoDB se usa como complemento documental y analítico.
+- El sharding se documenta de forma teórica/simulada, sin modificar el clúster Atlas real.
+- Las evidencias corresponden al entorno académico usado durante la implementación.
