@@ -1,0 +1,9 @@
+validation_item,status,evidence,notes
+schema_core_exists,OK,Consulta sobre information_schema.schemata,El esquema core existe en Supabase PostgreSQL.
+core_tables_exist,OK,Consulta sobre pg_tables,Las tablas principales del modelo Ecommify existen en core.
+row_estimates_available,OK,Consulta sobre pg_class y pg_namespace,Las tablas tienen conteos estimados disponibles.
+extensions_checked,OK,Consulta sobre pg_extension,Se validaron extensiones relevantes para el modelo.
+constraints_checked,OK,Consulta sobre information_schema.table_constraints,Se validaron primary keys foreign keys check constraints y otros constraints.
+orders_partitioning_checked,OK,Consulta sobre pg_partitioned_table,La tabla core.orders aparece particionada por purchase_date.
+indexes_inventory_checked,OK,Consulta sobre pg_indexes,Se validó inventario de índices del esquema core.
+explain_control_query_executed,OK,EXPLAIN ANALYZE BUFFERS,La consulta crítica de control ejecutó correctamente.

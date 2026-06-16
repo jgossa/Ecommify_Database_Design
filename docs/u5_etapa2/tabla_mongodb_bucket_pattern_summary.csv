@@ -1,0 +1,2 @@
+pattern,source_collection,target_collection,grouping_strategy,bucket_size_limit,source_reviews,bucket_documents,purpose
+Bucket Pattern,product_reviews,product_review_buckets,product_id + bucket_period + bucket_sequence,50,102172,33038,Agrupar reseñas por producto y periodo para reducir dispersión documental y facilitar consultas analíticas.

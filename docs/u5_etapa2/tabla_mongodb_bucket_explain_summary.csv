@@ -1,0 +1,2 @@
+query_code,collection_name,operation,winning_plan_stage,index_name,total_docs_examined,total_keys_examined,execution_time_millis,result_returned_count,is_covered,is_sort_in_memory
+BKT01,product_review_buckets,find,FETCH,idx_review_buckets_product_period_sequence,1,1,0,1,False,False

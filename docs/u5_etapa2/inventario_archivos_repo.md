@@ -1,0 +1,92 @@
+# Inventario de archivos del repositorio - U5 Etapa 2
+
+Este archivo resume los artefactos disponibles en el repositorio para soportar el documento técnico evaluativo.
+
+## Resumen por categoría
+
+| Categoría | Total archivos |
+|---|---:|
+| Capturas | 1 |
+| Documentación | 9 |
+| MongoDB - evidencias | 16 |
+| MongoDB - otros | 1 |
+| MongoDB - queries/scripts | 2 |
+| MongoDB - schema | 5 |
+| MongoDB - sharding/replica set | 2 |
+| MongoDB - índices | 2 |
+| Notebooks | 3 |
+| PostgreSQL - evidencias | 6 |
+| PostgreSQL - otros | 3 |
+| PostgreSQL - queries | 2 |
+| PostgreSQL - scripts DDL | 9 |
+| README raíz | 1 |
+| Video | 2 |
+
+## Inventario detallado
+
+| Ruta | Categoría | Extensión | Tamaño bytes |
+|---|---|---|---:|
+| README.md | README raíz | .md | 4683 |
+| docs/.gitkeep | Documentación | sin_extension | 0 |
+| docs/Documento_Tecnico_Diseno_Ecommify.pdf | Documentación | .pdf | 649301 |
+| docs/Presentacion_Ejecutiva_Ecommify.pdf | Documentación | .pdf | 272253 |
+| docs/u5_etapa2/.gitkeep | Documentación | sin_extension | 0 |
+| docs/u5_etapa2/Ecommify_U5_Etapa1_Optimizacion_MongoDB.pdf | Documentación | .pdf | 589705 |
+| docs/u5_etapa2/documento_tecnico_estructura.md | Documentación | .md | 7292 |
+| docs/u5_etapa2/documento_tecnico_fuentes.md | Documentación | .md | 3583 |
+| docs/u5_etapa2/matriz_trazabilidad_documento_rubrica.csv | Documentación | .csv | 3506 |
+| docs/u5_etapa2/matriz_trazabilidad_documento_rubrica.md | Documentación | .md | 3894 |
+| evidence/screenshots/.gitkeep | Capturas | sin_extension | 0 |
+| evidence/video/.gitkeep | Video | sin_extension | 0 |
+| evidence/video/video_demo_checklist.md | Video | .md | 2918 |
+| mongodb/README.md | MongoDB - otros | .md | 4325 |
+| mongodb/evidence/bucket_pattern/.gitkeep | MongoDB - evidencias | sin_extension | 0 |
+| mongodb/evidence/bucket_pattern/product_review_buckets_sample.json | MongoDB - evidencias | .json | 735 |
+| mongodb/evidence/bucket_pattern/u5_etapa2_mongodb_bucket_explain_summary.csv | MongoDB - evidencias | .csv | 283 |
+| mongodb/evidence/bucket_pattern/u5_etapa2_mongodb_bucket_indexes.csv | MongoDB - evidencias | .csv | 241 |
+| mongodb/evidence/bucket_pattern/u5_etapa2_mongodb_bucket_pattern_evidence.csv | MongoDB - evidencias | .csv | 346 |
+| mongodb/evidence/bucket_pattern/u5_etapa2_mongodb_bucket_query_sample.csv | MongoDB - evidencias | .csv | 215 |
+| mongodb/evidence/explain_before_after/.gitkeep | MongoDB - evidencias | sin_extension | 0 |
+| mongodb/evidence/explain_before_after/hito3_baseline_explain_summary.csv | MongoDB - evidencias | .csv | 1798 |
+| mongodb/evidence/explain_before_after/hito5_before_after_comparison.csv | MongoDB - evidencias | .csv | 2689 |
+| mongodb/evidence/explain_before_after/hito5_optimized_explain_summary.csv | MongoDB - evidencias | .csv | 1821 |
+| mongodb/evidence/explain_before_after/hito6_pipeline_comparison.csv | MongoDB - evidencias | .csv | 461 |
+| mongodb/evidence/explain_before_after/hito6_pipeline_improvement.csv | MongoDB - evidencias | .csv | 69 |
+| mongodb/evidence/explain_before_after/hito6_pipeline_stages.csv | MongoDB - evidencias | .csv | 464 |
+| mongodb/evidence/json_schema/.gitkeep | MongoDB - evidencias | sin_extension | 0 |
+| mongodb/evidence/json_schema/u5_etapa2_mongodb_json_schema_evidence.csv | MongoDB - evidencias | .csv | 133 |
+| mongodb/evidence/json_schema/u5_etapa2_mongodb_json_schema_validation_test.csv | MongoDB - evidencias | .csv | 1154 |
+| mongodb/indexes/.gitkeep | MongoDB - índices | sin_extension | 0 |
+| mongodb/indexes/mongodb_indexes.py | MongoDB - índices | .py | 10202 |
+| mongodb/queries/.gitkeep | MongoDB - queries/scripts | sin_extension | 0 |
+| mongodb/queries/build_product_review_buckets.py | MongoDB - queries/scripts | .py | 9188 |
+| mongodb/schema/apply_product_catalog_json_schema.py | MongoDB - schema | .py | 2562 |
+| mongodb/schema/customer_events_schema.json | MongoDB - schema | .json | 1471 |
+| mongodb/schema/product_catalog_json_schema_validator.json | MongoDB - schema | .json | 2327 |
+| mongodb/schema/product_catalog_schema.json | MongoDB - schema | .json | 1666 |
+| mongodb/schema/product_reviews_schema.json | MongoDB - schema | .json | 1627 |
+| mongodb/sharding/.gitkeep | MongoDB - sharding/replica set | sin_extension | 0 |
+| mongodb/sharding/sharding_replica_set_design.md | MongoDB - sharding/replica set | .md | 4790 |
+| notebooks/.gitkeep | Notebooks | sin_extension | 0 |
+| notebooks/EcommifyActividad1_Olist.ipynb | Notebooks | .ipynb | 657910 |
+| notebooks/Ecommify_U5_Etapa1_MongoDB.ipynb | Notebooks | .ipynb | 863502 |
+| postgresql/README.md | PostgreSQL - otros | .md | 3608 |
+| postgresql/evidence/explain_before_after/.gitkeep | PostgreSQL - evidencias | sin_extension | 0 |
+| postgresql/evidence/explain_before_after/README.md | PostgreSQL - evidencias | .md | 842 |
+| postgresql/evidence/explain_before_after/pg_explain_before_after_manifest.csv | PostgreSQL - evidencias | .csv | 636 |
+| postgresql/evidence/validation/.gitkeep | PostgreSQL - evidencias | sin_extension | 0 |
+| postgresql/evidence/validation/pg_validation_checklist.csv | PostgreSQL - evidencias | .csv | 975 |
+| postgresql/evidence/validation/pg_validation_summary.md | PostgreSQL - evidencias | .md | 1343 |
+| postgresql/indexes/.gitkeep | PostgreSQL - otros | sin_extension | 0 |
+| postgresql/queries/11_validation_queries.sql | PostgreSQL - queries | .sql | 719 |
+| postgresql/queries/12_monitoring_queries.sql | PostgreSQL - queries | .sql | 773 |
+| postgresql/schema/00_extensions.sql | PostgreSQL - scripts DDL | .sql | 371 |
+| postgresql/schema/01_schemas.sql | PostgreSQL - scripts DDL | .sql | 312 |
+| postgresql/schema/02_types_domains.sql | PostgreSQL - scripts DDL | .sql | 1008 |
+| postgresql/schema/03_tables_core.sql | PostgreSQL - scripts DDL | .sql | 1863 |
+| postgresql/schema/04_tables_transactions.sql | PostgreSQL - scripts DDL | .sql | 2846 |
+| postgresql/schema/05_indexes.sql | PostgreSQL - scripts DDL | .sql | 1234 |
+| postgresql/schema/06_triggers_updated_at.sql | PostgreSQL - scripts DDL | .sql | 984 |
+| postgresql/schema/07_partitioning_orders.sql | PostgreSQL - scripts DDL | .sql | 673 |
+| postgresql/schema/08_materialized_views.sql | PostgreSQL - scripts DDL | .sql | 1790 |
+| postgresql/seed_data/10_seed_data.sql | PostgreSQL - otros | .sql | 657 |

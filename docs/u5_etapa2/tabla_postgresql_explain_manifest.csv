@@ -1,0 +1,6 @@
+evidence_item,status,description,source_reference
+baseline_explain,documented,Medición base de Q01-Q09 con EXPLAIN ANALYZE BUFFERS,U4 Etapa 2 Hito 4
+post_optimization_explain,documented,Medición posterior después de optimizaciones e índices,U4 Etapa 2 Hito 8
+before_after_comparison,documented,Comparación antes/después con reducción de tiempo y bloques leídos cuando aplica,U4 Etapa 2 Hito 8
+specialized_indexes,documented,Índices B-tree parcial GIN pg_trgm y BRIN documentados,U4 Etapa 2 Hito 7
+partitioning_validation,documented,Validación de particionamiento declarativo de core.orders por purchase_date,U4 Etapa 2 Hito 9

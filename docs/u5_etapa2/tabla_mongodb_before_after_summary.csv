@@ -1,0 +1,8 @@
+query_code,execution_time_ms_before,execution_time_ms_after,execution_time_improvement_pct,total_docs_examined_before,total_docs_examined_after,docs_examined_improvement_pct,plan_classification_before,plan_classification_after,technical_interpretation
+Q01,1,5,-400.0,2,2,0.0,IXSCAN - Uso de índice,IXSCAN - Uso de índice,No se observa mejora significativa o la consulta ya estaba optimizada.
+Q02,0,0,,1,1,0.0,IXSCAN - Uso de índice,IXSCAN - Uso de índice,No se observa mejora significativa o la consulta ya estaba optimizada.
+Q03,0,3,,1,1,0.0,IXSCAN - Uso de índice,IXSCAN - Uso de índice,No se observa mejora significativa o la consulta ya estaba optimizada.
+Q04,4,20,-400.0,1000,1000,0.0,COLLSCAN - Revisión completa de colección,IXSCAN - Uso de índice,Cambió de escaneo completo a uso de índice.
+Q05,0,6,,1,1,0.0,IXSCAN - Uso de índice,IXSCAN - Uso de índice,No se observa mejora significativa o la consulta ya estaba optimizada.
+Q06,42,106,-152.38095238095238,15275,15275,0.0,IXSCAN - Uso de índice,IXSCAN - Uso de índice,No se observa mejora significativa o la consulta ya estaba optimizada.
+Q07,4,3,25.0,0,0,,IXSCAN - Uso de índice,IXSCAN - Uso de índice,Redujo tiempo de ejecución.
