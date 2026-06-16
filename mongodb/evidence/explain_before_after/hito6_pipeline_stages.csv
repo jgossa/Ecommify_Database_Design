@@ -1,0 +1,8 @@
+stage_order,stage,purpose
+1,$match,Filtrar temprano por categoría para reducir documentos procesados.
+2,$project,Reducir campos antes de hacer lookup y agrupaciones.
+3,$lookup,Unir productos del catálogo con sus reseñas.
+4,$unwind,Descomponer el arreglo de reseñas para calcular métricas.
+5,$group,Agrupar por categoría y calcular métricas agregadas.
+6,$project,Formatear la salida final del análisis.
+7,$sort,Ordenar categorías por desempeño comercial.
