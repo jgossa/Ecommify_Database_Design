@@ -23,16 +23,3 @@ La evidencia detallada se encuentra documentada en el entregable:
 
 `Ecommify_U4_Etapa2_Implementacion_Optimizacion_PostgreSQL.pdf`
 
-## Archivos esperados si se exportan desde Colab
-
-Cuando estén disponibles los CSV del notebook U4, pueden agregarse aquí con nombres como:
-
-- pg_baseline_explain_summary.csv
-- pg_post_optimization_explain_summary.csv
-- pg_before_after_comparison.csv
-- pg_partitioning_comparison.csv
-- pg_index_size_summary.csv
-
-## Nota de alcance
-
-Esta carpeta no reconstruye las métricas manualmente. Su propósito es organizar la evidencia PostgreSQL de rendimiento y dejar trazabilidad hacia el documento y notebook donde se ejecutaron las mediciones.
