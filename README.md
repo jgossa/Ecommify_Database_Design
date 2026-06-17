@@ -165,6 +165,9 @@ Los entregables asociados son:
 2. Repositorio GitHub actualizado.
 3. Video de demostración.
 
+Observación
+- [Documento técnico U5 Etapa 2 - Implementación técnica completa en PostgreSQL y MongoDB](docs/u5_etapa2/Ecommify_U5_Etapa2_Imp_Completa_PostgreSQL_MongoDB.pdf)
+
 ## Alcance y limitaciones
 
 - El repositorio mantiene continuidad con entregas anteriores del proyecto.
