@@ -39,6 +39,8 @@ Ecommify_Database_Design/
 - README.md
 - docs/
   - u5_etapa2/
+  - u6
+  	- evidencias
 - postgresql/
   - README.md
   - schema/
