@@ -163,15 +163,30 @@ Los entregables asociados son:
 
 1. Documento técnico de implementación.
 2. Repositorio GitHub actualizado.
-3. Video de demostración.
 
 Observación
 - [Documento técnico U5 Etapa 2 - Implementación técnica completa en PostgreSQL y MongoDB](docs/u5_etapa2/Ecommify_U5_Etapa2_Imp_Completa_PostgreSQL_MongoDB.pdf)
 
-## Alcance y limitaciones
+## Unidad 6 - Etapa 2: Informe técnico integral
 
-- El repositorio mantiene continuidad con entregas anteriores del proyecto.
-- PostgreSQL conserva el rol de fuente transaccional principal.
-- MongoDB se usa como complemento documental y analítico.
-- El sharding se documenta de forma teórica/simulada, sin modificar el clúster Atlas real.
-- Las evidencias corresponden al entorno académico usado durante la implementación.
+Esta entrega consolida el cierre técnico del proyecto Ecommify, integrando el diseño, implementación y evaluación de la arquitectura híbrida PostgreSQL/Supabase + MongoDB Atlas.
+
+PostgreSQL/Supabase se mantiene como fuente transaccional principal para pedidos, pagos, inventario, clientes, vendedores y productos maestros. MongoDB Atlas se usa como módulo documental y analítico para catálogo enriquecido, reseñas, búsquedas flexibles y agregaciones.
+
+## Entregables Unidad 6
+
+| Archivo | Descripción |
+|---|---|
+| [Informe técnico integral U6 Etapa 2](docs/u6/Ecommify_U6_Etapa2_Informe_Tecnico_Integral.pdf) | Documento final con executive summary, arquitectura, implementación, evaluación de rendimiento, análisis crítico, recomendaciones, conclusiones y anexos. |
+| [Diagrama ER sintético](docs/u6/diagrama_er_sintetico_ecommify.jpg) | Modelo relacional principal de Ecommify para el módulo PostgreSQL. |
+| [Arquitectura híbrida](docs/u6/arquitectura_hibrida_ecommify.jpeg) | Vista general de la arquitectura PostgreSQL/Supabase + MongoDB Atlas. |
+| [Evidencias U6 Etapa 1](docs/u6/evidencias/evidencias_u6_etapa1.zip) | Evidencias técnicas usadas como soporte para la evaluación integral. |
+
+### Alcance de la entrega
+
+- Consolidación de trazabilidad U2-U6.
+- Validación de coherencia arquitectónica.
+- Evaluación de rendimiento y escalabilidad.
+- Recomendaciones estratégicas para evolución del proyecto.
+- Organización de evidencias y documentación final.
+
