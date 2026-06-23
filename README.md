@@ -182,7 +182,11 @@ PostgreSQL/Supabase se mantiene como fuente transaccional principal para pedidos
 | [Informe técnico integral U6 Etapa 2](docs/u6/Ecommify_U6_Etapa2_Informe_Tecnico_Integral.pdf) | Documento final con executive summary, arquitectura, implementación, evaluación de rendimiento, análisis crítico, recomendaciones, conclusiones y anexos. |
 | [Diagrama ER sintético](docs/u6/diagrama_er_sintetico_ecommify.jpg) | Modelo relacional principal de Ecommify para el módulo PostgreSQL. |
 | [Arquitectura híbrida](docs/u6/arquitectura_hibrida_ecommify.jpeg) | Vista general de la arquitectura PostgreSQL/Supabase + MongoDB Atlas. |
+| [Modelo documental Sintético](docs/u6/Modelo_Documental_Sintetico.png) | Módulo MongoDB dentro de la arquitectura Híbrida. |
 | [Evidencias U6 Etapa 1](docs/u6/evidencias/evidencias_u6_etapa1.zip) | Evidencias técnicas usadas como soporte para la evaluación integral. |
+
+
+
 
 ### Alcance de la entrega
 
