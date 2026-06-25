@@ -184,6 +184,7 @@ PostgreSQL/Supabase se mantiene como fuente transaccional principal para pedidos
 | [Arquitectura híbrida](docs/u6/arquitectura_hibrida_ecommify.jpeg) | Vista general de la arquitectura PostgreSQL/Supabase + MongoDB Atlas. |
 | [Modelo documental Sintético](docs/u6/Modelo_Documental_Sintetico.png) | Módulo MongoDB dentro de la arquitectura Híbrida. |
 | [Evidencias U6 Etapa 1](docs/u6/evidencias/evidencias_u6_etapa1.zip) | Evidencias técnicas usadas como soporte para la evaluación integral. |
+| [Video Ejecutivo](docs/u6/evidencias/video_ejecutivo.mp4) | Video ejecutivo Ecommify. |
 
 
 
